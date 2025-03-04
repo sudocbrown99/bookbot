@@ -3,7 +3,18 @@ def main():
   text = get_book_text(book_path)
   num_words = get_num_words(text)
   chars_dict = get_chars_dict(text)
-  print(num_words, "words found in the document")
+  print(
+    f"============ BOOKBOT ============\n"
+    f"Analyzing book found at {book_path}..."
+    )
+  print(
+    f"----------- Word Count ----------\n"
+    f"Found {num_words} total words"
+    )
+  print(
+    f"--------- Character Count -------\n"
+    f""
+  )
 
 from stats import get_num_words
 
