@@ -3,24 +3,11 @@ def main():
   text = get_book_text(book_path)
   num_words = get_num_words(text)
   chars_dict = get_chars_dict(text)
-  print(chars_dict)
+  print(num_words, "words found in the document")
 
-def get_book_text(path):
-  with open(path) as f:
-    content = f.read()
-    return content
-  
-def get_num_words(text):
-  words = text.split()
-  return len(words)
+from stats import get_num_words
 
-def get_chars_dict(text):
-  chars = {}
-  for c in text:
-    lowered = c.lower()
-    if lowered in chars:
-      chars[lowered] += 1
-    else:
-      chars[lowered] = 1
-  return chars
+from stats import get_book_text
+
+from stats import get_chars_dict
 main()
